@@ -128,6 +128,10 @@ class AbstractSetup(ABC):
                             print(ds)
                             print('\n datasize: %.1f GB' %(ds.nbytes / 1e9))
                         for op in self.computations:
+                            print('operation is',op)
+                            print('type 1 to start the bench',op)
+                            # input()
+                            sleep(10) 
                             with timer.time(
                                 operation=op.__name__,
                                 chunk_size=chunk_size,
@@ -143,6 +147,9 @@ class AbstractSetup(ABC):
                                 spil=spil,
                             ):
                                 wait(op(ds).persist())
+                                if verbose:
+                                   print(op(ds))
+                                   print('\n datasize: %.1f KB' %(op(ds).nbytes / 1e3))
                         if verbose:
                             print('kills ds and every other dependent computation')
                             #print('restarting all worker process before starting series of bench')
