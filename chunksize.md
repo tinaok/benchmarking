@@ -1,7 +1,7 @@
 
 # summary of shape and chunk size for SST (time,lon,lat ) dataset :20G of with chunk size 128M (output of debug16.ipynb)
 
-| chunking scheme | chunk_size=128MB | global_mean | temporal_mean | climatology | anomaly |
+| chunking scheme | chunk_size=128 MB | global_mean | temporal_mean | climatology | anomaly |
 |---|---|---|---|---|---|
 |shape |(20834, 384, 320)|(384, 320)| (20834,)|(4, 384, 320)|(20834, 384, 320)|
 |spatial | (20834, 28, 28) | (28, 28) | (20834,)|  (1, 28, 28) | (60, 28, 28)|
@@ -17,12 +17,12 @@ i.e. automatic only have chunk size of 62MB??
 
 # summary of shape and chunk size for SST (time,lon,lat ) dataset :20G of with chunk size 256M (output of debug8.ipynb)
 
-| chunking scheme | chunk_size=128MB | global_mean | temporal_mean | climatology | anomaly |
+| chunking scheme | chunk_size=256 MB | global_mean | temporal_mean | climatology | anomaly |
 |---|---|---|---|---|---|
 |shape |(20834, 384, 320)|(384, 320)| (20834,)|(4, 384, 320)|(20834, 384, 320)|
-|spatial |(20834, 40, 40)> |(40, 40)> |(20834,)> |(1, 40, 40)> |(60, 40, 40)>
-|temporal |(261, 384, 320)> |(384, 320)> |(261,)> |(1, 384, 320)> |(60, 384, 320)>
-|auto |(317, 192, 160)> |(192, 160)> |(317,)> |(1, 192, 160)> |(60, 192, 160)>
+|spatial |(20834, 40, 40) |(40, 40)> |(20834,) |(1, 40, 40)> |(60, 40, 40)|
+|temporal |(261, 384, 320) |(384, 320)> |(261,) |(1, 384, 320) |(60, 384, 320)|
+|auto |(317, 192, 160) |(192, 160)> |(317,) |(1, 192, 160)> |(60, 192, 160)|
 
 256 MB corresponds to 32000000 elements.
 spatial have total  33334400 elements.  temporal have total 32071680 elements, automatic have total 9738240 elements.  
@@ -33,7 +33,7 @@ i.e. Automatic only corresponds to chunk size 78MB?
 
 # summary of shape and chunk size for SST (time,lon,lat ) dataset :20G of with chunk size 512M  (output of debug4.ipynb
 
-| chunking scheme | chunk_size=128MB | global_mean | temporal_mean | climatology | anomaly |
+| chunking scheme | chunk_size=512 MB | global_mean | temporal_mean | climatology | anomaly |
 |---|---|---|---|---|---|
 |shape |(20834, 384, 320)|(384, 320)| (20834,)|(4, 384, 320)|(20834, 384, 320)|
 |spatial |(20834, 56, 56)| (56, 56)| (20834,)| (1, 56, 56)| (60, 56, 56)|
