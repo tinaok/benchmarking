@@ -1,5 +1,5 @@
 
-# summary of shape and chunk size for 20G SST datasize with chunk size 128M
+# summary of shape and chunk size for SST (time,lon,lat ) dataset :20G of with chunk size 128M
 
 | chunking scheme | chunk_size=128MB | global_mean | temporal_mean | climatology | anomaly |
 |---|---|---|---|---|---|
@@ -9,5 +9,5 @@
 |auto |  (251, 192, 160)     | (192, 160)|  (251,)| (1, 192, 160)|  (60, 192, 160)|
 
 
-spatial have total  16333856 elements.  temporal have total 16097280 elements, automatic have total 7710720 elements.
+spatial have total  16333856 elements.  temporal have total 16097280 elements, automatic have total 7710720 elements.  
 
