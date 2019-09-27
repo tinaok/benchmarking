@@ -47,4 +47,3 @@ spatial have total  65335424 elements.  temporal have total 64020480 elements, a
 
 All 3 chunking schme have correct number of elements. 
 
-# todo, rerun debug8.ipynb and debug16.ipynb and see if I get same result to be sure 
